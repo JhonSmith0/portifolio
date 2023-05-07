@@ -5,6 +5,7 @@ import Header from "./Header";
 
 const SHeroSection = styled(SSection)`
   background: #171a1d;
+  padding: 0;
 `;
 
 export default function HeroSection() {

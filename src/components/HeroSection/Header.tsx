@@ -14,6 +14,8 @@ const SHeader = styled.header`
 
   font-size: 1.6rem;
 
+  background: #1a1e21;
+
   > div {
     display: flex;
     gap: 3.2rem;

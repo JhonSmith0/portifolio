@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { Button } from "../styled/Button";
+import { useHookstate } from "@hookstate/core";
+import { useEffect } from "react";
+import { interval } from "../../utils/interval";
+import { Typing } from "../Typing";
 
 const SContent = styled.div`
   display: flex;
@@ -11,6 +16,7 @@ const SContent = styled.div`
     h1 {
       font-size: 5.6rem;
       margin-bottom: 1rem;
+      font-family: "Roboto", "Inter";
     }
 
     p {
@@ -32,21 +38,22 @@ const SContent = styled.div`
     }
   }
 `;
+
 function Content() {
   return (
     <SContent>
       <div className="introduction">
         <h1>
-          Hello,
+          <span>Hello,</span>
           <br />
-          I'm Smith
+          <span>I'm Smith</span>
           <br />
-          Fullstack Developer
+          <Typing text="Fullstack Developer" startFull={true} />
         </h1>
         <p>nice too meet you !</p>
-        <button className="cv">
-          <span>View My CV</span>
-        </button>
+        <Button>
+          <span>View my CV</span>
+        </Button>
       </div>
     </SContent>
   );
